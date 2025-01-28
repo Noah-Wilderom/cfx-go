@@ -6,7 +6,6 @@ import (
 	"syscall/js"
 )
 
-9648af2
 func isGetter(t string, ft reflect.Type) bool {
 	return isProperty(t) && ft.NumIn() == 0 && ft.NumOut() == 1
 }
