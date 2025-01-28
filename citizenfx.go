@@ -17,54 +17,45 @@ func init() {
 	}
 }
 func AddRawEventListener(eventName string, callback js.Func) {
-
 	Global.Call("AddRawEventListener", eventName, callback)
 }
 
 func AddEventListener(eventName string, callback js.Func, netSafe bool) {
 	Global.Call("AddEventListener", eventName, callback, netSafe)
 }
+
 func On(eventName string, callback js.Func) {
 	Global.Call("On", eventName, callback)
-
 }
+
 func AddEventHandler(eventName string, callback js.Func) {
 	Global.Call("AddEventHandler", eventName, callback)
-
 }
 
 func AddNetEventListener(eventName string, callback js.Func) {
 	Global.Call("AddNetEventListener", eventName, callback)
-
 }
+
 func OnNet(eventName string, callback js.Func) {
 	Global.Call("OnNet", eventName, callback)
-
 }
 
 func Emit(args ...interface{}) {
 	Global.Call("Emit", args)
-
 }
 
 func TriggerEvent(args ...interface{}) {
 	Global.Call("TriggerEvent", args)
-
 }
 
-// func EmitNet(args ...interface{}) {
-// }
 func EmitNet(args ...interface{}) {
 	Global.Call("EmitNet", args...)
-
 }
 func TriggerServerEvent(args ...interface{}) {
 	Global.Call("TriggerServerEvent", args)
-
 }
 func TriggerLatentServerEvent(args ...interface{}) {
 	Global.Call("TriggerLatentServerEvent", args...)
-
 }
 
 func GetPlayerIdentifiers(player interface{}) js.Value {

@@ -1,3 +1,3 @@
-module github.com/Noah-Wilderom/cfx
+module github.com/Noah-Wilderom/cfx-go
 
 go 1.23.3

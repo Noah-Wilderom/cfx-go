@@ -29,7 +29,7 @@ func bindGetter(name string, t reflect.Type, parent func() js.Value) reflect.Val
 			Bind(v.Interface(), func() js.Value { return parent().Get(name) })
 			return []reflect.Value{reflect.ValueOf(v.Elem().Interface())}
 		})
+	default:
+		panic("FIXME") //FIXME
 	}
-
-	panic("FIXME") //FIXME
 }
