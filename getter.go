@@ -33,6 +33,6 @@ func bindGetter(name string, t reflect.Type, parent func() js.Value) reflect.Val
 	default:
 		fmt.Println("fmt println werkt")
 		Print("type: ", t.Kind().String())
-		panic("FIXME") //FIXME
+		panic(fmt.Sprintf("FIXME | %s", t.Kind().String())) //FIXME
 	}
 }
