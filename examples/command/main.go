@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/Noah-Wilderom/cfx"
+	cfx "github.com/Noah-Wilderom/cfx-go"
 	"syscall/js"
 )
 

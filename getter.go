@@ -1,6 +1,7 @@
 package cfx
 
 import (
+	"fmt"
 	"reflect"
 	"syscall/js"
 )
@@ -30,6 +31,8 @@ func bindGetter(name string, t reflect.Type, parent func() js.Value) reflect.Val
 			return []reflect.Value{reflect.ValueOf(v.Elem().Interface())}
 		})
 	default:
+		fmt.Println("fmt println werkt")
+		Print("type: ", t.Kind().String())
 		panic("FIXME") //FIXME
 	}
 }
