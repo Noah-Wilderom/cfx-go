@@ -1,6 +1,7 @@
 package cfx
 
 import (
+	"fmt"
 	"reflect"
 	"strings"
 	"syscall/js"
@@ -42,7 +43,9 @@ func newFunction(tag string, t reflect.Type, parent func() js.Value) function {
 		var ok bool
 		mapReturn, ok = mapReturns[t.Out(0).Kind()]
 		if !ok {
-			panic("FIXME") //FIXME
+			fmt.Println("fmt println werkt")
+			Print("type: ", t.Out(0).Kind().String())
+			panic(fmt.Sprintf("FIXME | %s", t.Out(0).Kind().String())) //FIXME
 		}
 	}
 
